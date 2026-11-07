@@ -1,0 +1,51 @@
+========================================================================
+CRISPR Off-Target Platform – Paper Metrics Report
+========================================================================
+
+## 1. Test-set performance
+  Accuracy    : 0.9514
+  Precision   : 0.9450
+  Recall      : 0.9585
+  F1          : 0.9517
+  Auc         : 0.9575
+  AP (PR)     : 0.9452
+
+## 2. Bootstrap 95% Confidence Intervals
+  Metric            Mean              95% CI
+  accuracy        0.9514  [0.9447 – 0.9580]
+  precision       0.9449  [0.9347 – 0.9551]
+  recall          0.9586  [0.9498 – 0.9674]
+  f1              0.9517  [0.9447 – 0.9585]
+  auc             0.9576  [0.9499 – 0.9647]
+
+## 3. Confusion Matrix (rows=true, cols=pred)
+                Pred 0      Pred 1
+  True 0          1,776         105
+  True 1             78       1,803
+
+## 4. Ablation Study (AUC / F1)
+  Emb only                   AUC=0.9618  F1=0.9517  Acc=0.9514
+  Feat+Emb                   AUC=0.9571  F1=0.9517  Acc=0.9514
+  Diff+Emb                   AUC=0.9564  F1=0.9519  Acc=0.9516
+  Full (Feat+Diff+Emb)       AUC=0.9563  F1=0.9535  Acc=0.9532
+  Feat only                  AUC=0.9538  F1=0.9514  Acc=0.9511
+  Feat+Diff                  AUC=0.9526  F1=0.9517  Acc=0.9514
+  Diff only                  AUC=0.9490  F1=0.9517  Acc=0.9514
+
+## 5. Label Permutation (Randomization) Test
+  Observed AUC     : 0.9575
+  Null mean ± std  : 0.8034 ± 0.1233
+  p-value          : 0.0000
+  p-value (report) : ≤ 0.0099
+  n permutations   : 100
+
+## 6. Figures
+  - /kaggle/working/crispr_offtarget_platform/outputs/figures/training_history.png
+  - /kaggle/working/crispr_offtarget_platform/outputs/figures/bootstrap_ci.png
+  - /kaggle/working/crispr_offtarget_platform/outputs/figures/confusion_matrix.png
+  - /kaggle/working/crispr_offtarget_platform/outputs/figures/roc_curve.png
+  - /kaggle/working/crispr_offtarget_platform/outputs/figures/pr_curve.png
+  - /kaggle/working/crispr_offtarget_platform/outputs/figures/ablation_study.png
+  - /kaggle/working/crispr_offtarget_platform/outputs/figures/permutation_test.png
+
+========================================================================
